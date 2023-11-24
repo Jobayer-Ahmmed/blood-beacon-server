@@ -10,10 +10,15 @@ const getConnectionString=()=>{
 }
 
 const connectDB = async()=>{
-    const uri = getConnectionString()
+    try{
+        const uri = getConnectionString()
 
-    await mongoose.connect(uri, {dbName:process.env.DB_NAME})
-    console.log("database connection successfull")
+        await mongoose.connect(uri, {dbName:process.env.DB_NAME})
+        console.log("database connection successfull")
+    }
+    catch(err){
+        console.log(err)
+    }
 }
 
 export default connectDB
