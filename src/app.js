@@ -2,7 +2,8 @@ import express from "express"
 import applyMiddleWare from "./middlewares/applyMiddleWare.js"
 import districtsRoute from "./routes/districtsRoute/index.js"
 import upzilasRoute from "./routes/upzilasRoute/index.js"
-import donorPostRoute from "./routes/donorPostRoute/index.js"
+import allUserPostRoute from "./routes/allUserPostRoute/index.js"
+import allUserGetRoute from "./routes/allUserGetRoute/index.js"
 
 
 const app =express()
@@ -12,7 +13,8 @@ applyMiddleWare(app)
 
 app.use(districtsRoute)
 app.use(upzilasRoute)
-app.use(donorPostRoute)
+app.use(allUserPostRoute)
+app.use(allUserGetRoute)
 
 app.get("/health", (req, res)=>{
     res.send("Blood Donation server is running")

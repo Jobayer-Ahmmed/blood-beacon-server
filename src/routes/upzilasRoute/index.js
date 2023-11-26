@@ -3,9 +3,9 @@ import upzilasCollection from "../../models/Upzilas.js"
 
 var router = express.Router()
 
-router.get("/upzilas/:id", async(req, res)=>{
-    const district_id = req.params.id
-    const query = {district_id}
+router.get("/upzilas/:districtName", async(req, res)=>{
+    const district = req.params.districtName
+    const query = {district}
     console.log("im upzilas router")
     const result = await upzilasCollection.find(query)
     res.send(result)
