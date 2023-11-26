@@ -1,18 +1,18 @@
 import express from "express"
-import "dotenv/config"
 import applyMiddleWare from "./middlewares/applyMiddleWare.js"
-import connectDB from "./db/connectDB.js"
 import districtsRoute from "./routes/districtsRoute/index.js"
 import upzilasRoute from "./routes/upzilasRoute/index.js"
+import donorPostRoute from "./routes/donorPostRoute/index.js"
 
 
 const app =express()
-const port = process.env.PORT || 5000
+
 
 applyMiddleWare(app)
 
 app.use(districtsRoute)
 app.use(upzilasRoute)
+app.use(donorPostRoute)
 
 app.get("/health", (req, res)=>{
     res.send("Blood Donation server is running")
@@ -35,8 +35,4 @@ app.use((err, req, res, next)=>{
     res.status(err.status || 500).json({message : err.message})
 })
 
-const main = async()=>{
-    await connectDB()
-    app.listen(port,()=>console.log(`The port ${port} is running`))
-}
-main()
+export default app
