@@ -16,3 +16,6 @@ const donationSchema = new Schema({
 
 const donationCollection = model("donationCollection", donationSchema)
 export default donationCollection
+
+
+
