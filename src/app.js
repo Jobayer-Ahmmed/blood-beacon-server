@@ -4,6 +4,7 @@ import districtsRoute from "./routes/districtsRoute/index.js"
 import upzilasRoute from "./routes/upzilasRoute/index.js"
 import allUserPostRoute from "./routes/allUserPostRoute/index.js"
 import allUserGetRoute from "./routes/allUserGetRoute/index.js"
+import donationPostRoute from "./routes/donationPostRoute/index.js"
 
 
 const app =express()
@@ -15,6 +16,7 @@ app.use(districtsRoute)
 app.use(upzilasRoute)
 app.use(allUserPostRoute)
 app.use(allUserGetRoute)
+app.use(donationPostRoute)
 
 app.get("/health", (req, res)=>{
     res.send("Blood Donation server is running")
