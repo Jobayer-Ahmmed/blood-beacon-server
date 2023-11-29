@@ -6,7 +6,9 @@ import allUserPostRoute from "./routes/allUserPostRoute/index.js"
 import allUserGetRoute from "./routes/allUserGetRoute/index.js"
 import donationPostRoute from "./routes/donationPostRoute/index.js"
 import donorGetRoute from "./routes/donorGetRoute/index.js"
-
+import userTypeGetRoute from "./routes/userTypeGetRoute/index.js"
+import allUserPutRoute from "./routes/allUserPutRoute/index.js"
+import donationGetRoute from "./routes/donationGetRoute/index.js"
 
 const app =express()
 
@@ -19,6 +21,9 @@ app.use(allUserPostRoute)
 app.use(allUserGetRoute)
 app.use(donationPostRoute)
 app.use(donorGetRoute)
+app.use(userTypeGetRoute)
+app.use(allUserPutRoute)
+app.use(donationGetRoute)
 
 app.get("/health", (req, res)=>{
     res.send("Blood Donation server is running")
