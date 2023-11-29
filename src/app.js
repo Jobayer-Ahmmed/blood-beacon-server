@@ -5,10 +5,16 @@ import upzilasRoute from "./routes/upzilasRoute/index.js"
 import allUserPostRoute from "./routes/allUserPostRoute/index.js"
 import allUserGetRoute from "./routes/allUserGetRoute/index.js"
 import donationPostRoute from "./routes/donationPostRoute/index.js"
-import donorGetRoute from "./routes/donorGetRoute/index.js"
 import userTypeGetRoute from "./routes/userTypeGetRoute/index.js"
 import allUserPutRoute from "./routes/allUserPutRoute/index.js"
+import donationGetRouteByEmail from "./routes/donationGetRouteByEmail/index.js"
+import donorGetRoute from "./routes/donorGetRoute/index.js"
 import donationGetRoute from "./routes/donationGetRoute/index.js"
+import donationDeleteRouteByEmail from "./routes/donationDeleteRouteByEmail/index.js"
+import donationPutRouteByEmail from "./routes/donationPutRouteByEmail/index.js"
+import donationGetRouteById from "./routes/donationGetRouteById/index.js"
+import donationPutRouteById from "./routes/donationPutRouteById/index.js"
+
 
 const app =express()
 
@@ -20,10 +26,16 @@ app.use(upzilasRoute)
 app.use(allUserPostRoute)
 app.use(allUserGetRoute)
 app.use(donationPostRoute)
-app.use(donorGetRoute)
+app.use(donationGetRouteByEmail)
 app.use(userTypeGetRoute)
 app.use(allUserPutRoute)
+app.use(donorGetRoute)
 app.use(donationGetRoute)
+app.use(donationDeleteRouteByEmail)
+app.use(donationPutRouteByEmail)
+app.use(donationGetRouteById)
+app.use(donationPutRouteById)
+
 
 app.get("/health", (req, res)=>{
     res.send("Blood Donation server is running")
