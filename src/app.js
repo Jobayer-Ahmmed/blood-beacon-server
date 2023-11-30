@@ -16,6 +16,8 @@ import donationGetRouteById from "./routes/donationGetRouteById/index.js"
 import donationPutRouteById from "./routes/donationPutRouteById/index.js"
 import usersRoute from "./routes/usersRoute/index.js"
 import blogPostRoute from "./routes/blogPostRoute/index.js"
+import blogGetRoute from "./routes/blogGetRoute/index.js"
+import blogPutRoute from "./routes/blogPutRoute/index.js"
 
 
 const app =express()
@@ -39,6 +41,8 @@ app.use(donationGetRouteById)
 app.use(donationPutRouteById)
 app.use(usersRoute)
 app.use(blogPostRoute)
+app.use(blogGetRoute)
+app.use(blogPutRoute)
 
 
 app.get("/health", (req, res)=>{
