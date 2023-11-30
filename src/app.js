@@ -14,6 +14,8 @@ import donationDeleteRouteByEmail from "./routes/donationDeleteRouteByEmail/inde
 import donationPutRouteByEmail from "./routes/donationPutRouteByEmail/index.js"
 import donationGetRouteById from "./routes/donationGetRouteById/index.js"
 import donationPutRouteById from "./routes/donationPutRouteById/index.js"
+import usersRoute from "./routes/usersRoute/index.js"
+import blogPostRoute from "./routes/blogPostRoute/index.js"
 
 
 const app =express()
@@ -35,6 +37,8 @@ app.use(donationDeleteRouteByEmail)
 app.use(donationPutRouteByEmail)
 app.use(donationGetRouteById)
 app.use(donationPutRouteById)
+app.use(usersRoute)
+app.use(blogPostRoute)
 
 
 app.get("/health", (req, res)=>{
