@@ -1,17 +1,18 @@
 import { Schema, model } from "mongoose";
 
 const donationSchema = new Schema({
-    name: {type : String, required:true},
-    email: {type : String, required:true},
-    recipient_name: {type : String, required:true},
-    districts: {type : String, required:true},
-    upzilas: {type : String, required:true},
-    hospital_name: {type : String, required:true},
-    address: {type : String, required:true},
-    donation_date: {type : String, required:true},
-    donation_time: {type : String, required:true},
-    request_message: {type : String, required:true},
-    donation_status: {type : String, required:true}
+    name: {type : String},
+    email: {type : String},
+    recipient_name: {type : String},
+    districts: {type : String},
+    upzilas: {type : String},
+    hospital_name: {type : String},
+    address: {type : String},
+    donation_date: {type : String},
+    donation_time: {type : String},
+    request_message: {type : String},
+    donation_status: {type : String},
+    user_type : {type:String}
 })
 
 const donationCollection = model("donationCollection", donationSchema)

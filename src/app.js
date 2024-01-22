@@ -18,6 +18,19 @@ import usersRoute from "./routes/usersRoute/index.js"
 import blogPostRoute from "./routes/blogPostRoute/index.js"
 import blogGetRoute from "./routes/blogGetRoute/index.js"
 import blogPutRoute from "./routes/blogPutRoute/index.js"
+import publishBlogGetRoute from "./routes/publishBlogGetRoute/index.js"
+import userStatusPutRoute from "./routes/userStatusPutRoute/index.js"
+import userTypePutRouteById from "./routes/userTypePutRouteById/index.js"
+import donationStatusPutRouteById from "./routes/donationStatusPutRouteById/index.js"
+import blogGetRouteById from "./routes/blogGetRouteById/index.js"
+import blogDeleteRouteById from "./routes/blogDeleteRouteById/index.js"
+import blogReadtRouteById from "./routes/blogReadRouteById/index.js"
+import userCountRoute from "./routes/usersCountRoute/index.js"
+import donationGetRouteCount from "./routes/donationGetRouteCount/index.js"
+import donationRequestDetails from "./routes/donationRequestDetails/index.js"
+import donationIndividualGetRoute from "./routes/donationIndividulGetRoute/index.js"
+import donationRequestCountByEmail from "./routes/donationRequestCountByEmail/index.js"
+import searchDonorGetRoute from "./routes/searchDonorGetRoute/index.js"
 
 
 const app =express()
@@ -43,6 +56,23 @@ app.use(usersRoute)
 app.use(blogPostRoute)
 app.use(blogGetRoute)
 app.use(blogPutRoute)
+app.use(publishBlogGetRoute)
+app.use(userStatusPutRoute)
+app.use(userTypePutRouteById)
+app.use(donationStatusPutRouteById)
+app.use(blogGetRouteById)
+app.use(blogDeleteRouteById)
+app.use(blogReadtRouteById)
+app.use(userCountRoute)
+app.use(donationGetRouteCount)
+app.use(donationRequestDetails)
+app.use(donationIndividualGetRoute)
+app.use(donationRequestCountByEmail)
+app.use(searchDonorGetRoute)
+
+
+
+
 
 
 app.get("/health", (req, res)=>{
