@@ -32,6 +32,7 @@ import donationIndividualGetRoute from "./routes/donationIndividulGetRoute/index
 import donationRequestCountByEmail from "./routes/donationRequestCountByEmail/index.js"
 import searchDonorGetRoute from "./routes/searchDonorGetRoute/index.js"
 import fundingPost from "./routes/fundingPostRoute/index.js"
+import fundingGet from "./routes/fundingGetRoute/index.js"
 
 
 const app =express()
@@ -71,6 +72,7 @@ app.use(donationIndividualGetRoute)
 app.use(donationRequestCountByEmail)
 app.use(searchDonorGetRoute)
 app.use(fundingPost)
+app.use(fundingGet)
 
 
 
