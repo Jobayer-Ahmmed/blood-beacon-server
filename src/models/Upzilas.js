@@ -8,5 +8,4 @@ const upzilasSchema = new Schema({
     district : {type : String, required:true}
 })
 const upzilasCollection =  model("upzilasCollection", upzilasSchema)
-console.log("i am upzila model")
 export default upzilasCollection
